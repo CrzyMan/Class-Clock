@@ -1,3 +1,6 @@
+# Komodo Edit project files
+*.komodoproject
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
