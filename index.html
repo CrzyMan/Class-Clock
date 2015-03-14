@@ -145,7 +145,7 @@ function initialize(){
     EventFactory.addEvent(5,10,"End of Tenth", true, document.getElementById("9e"));
     
     MainEvent = EventFactory.newEvent(0,0,"Main",false,document.getElementById('Main'));
-    EventFactory.setSize(MainEvent, 300);
+    updateMainClockSize();
     
     
     /* *
@@ -159,6 +159,15 @@ function initialize(){
     updatePage();
     timer = window.setInterval(updatePage, 1000);
 }
+
+function windowHW() {
+    return window.innerHeight>window.innerWidth?window.innerWidth:window.innerHeight;
+}
+
+function updateMainClockSize() {
+    EventFactory.setSize(MainEvent, windowHW()-40);
+}
+window.onresize = updateMainClockSize;
 
 function appendOrder(num){
     var ones = num-(Math.round(num/10)*10);
