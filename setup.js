@@ -23,7 +23,7 @@ var MainEvent;
 
 function initialize(){
     if (isMobile)
-        document.getElementsByTagName("a")[0].style.fontSize = "15pt";
+        document.getElementsByTagName("a")[0].style.fontSize = "5pt";
 
     // make all of the class events, perhaps produce a data structure to load these from
     EventFactory.addEvent(8,5,"Start of First", false, document.getElementById("0s"));
